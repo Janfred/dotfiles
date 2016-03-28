@@ -1,0 +1,22 @@
+[user]
+    name = Jan-Frederik Rieckers
+    email = rieckers@uni-bremen.de
+    signingkey = 5EA04DEF
+[alias]
+    bunch = "log --oneline --graph --decorate --all"
+    co = checkout
+    tree = log --graph --decorate --abbrev-commit --branches --tags --remotes --date=short --pretty=format:'%C(yellow)%h%Creset-%C(cyan)(%G?)%Creset%C(bold green)%d%Creset %s %Creset %C(cyan)[%cn]%Creset'
+    gpg = log --show-signature
+    psu = push
+[commit]
+    gpgsign = on
+[core]
+    editor = vim
+[push]
+    default = current
+[url "git@gitlab.informatik.uni-bremen.de:"]
+    insteadOf = gli:
+[url "git@github.com:"]
+    insteadOf = ghs:
+[url "https://github.com/"]
+    insteadOf = ghh:

@@ -1,0 +1,14 @@
+set number
+set cursorline
+"set textwidth=140
+set colorcolumn=+1
+set tabstop=4
+set expandtab
+set autoindent
+set incsearch
+syntax on
+filetype plugin on
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+highlight SquishedCommas ctermbg=red guibg=red
+call matchadd('ExtraWhitespace', '\s\+$')
+call matchadd('SquishedCommas', ', \@!')
