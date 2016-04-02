@@ -20,3 +20,5 @@
     insteadOf = ghs:
 [url "https://github.com/"]
     insteadOf = ghh:
+[gpg]
+	program = gpg2
