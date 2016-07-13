@@ -6,8 +6,10 @@
     bunch = "log --oneline --graph --decorate --all"
     co = checkout
     tree = log --graph --decorate --abbrev-commit --branches --tags --remotes --date=short --pretty=format:'%C(yellow)%h%Creset-%C(cyan)(%G?)%Creset%C(bold green)%d%Creset %s %Creset %C(cyan)[%cn]%Creset'
+    treetime = log --graph --decorate --abbrev-commit --branches --tags --remotes --date=iso --pretty=format:'%C(yellow)%h%Creset-%C(cyan)(%G?)%Creset%C(bold green)%d%Creset %s %Creset %C(cyan)[%cn, %ad]%Creset'
     gpg = log --show-signature
     psu = push
+    werhatsverbrochen = blame
 [commit]
     gpgsign = on
 [core]
@@ -21,4 +23,4 @@
 [url "https://github.com/"]
     insteadOf = ghh:
 [gpg]
-	program = gpg2
+    program = gpg2
