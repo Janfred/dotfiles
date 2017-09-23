@@ -27,12 +27,14 @@ font pango:monospace 8
 # font, it doesn’t scale on retina/hidpi displays.
 #
 bindsym $mod+t exec xfce4-terminal
+bindsym $mod+g exec gnome-terminal
 bindsym Control+Mod1+l exec i3lock -i ~/.i3/lockscreen.png
-bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
-bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+bindsym Control+Mod1+o exec xtrlock
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1%+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1%- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 bindsym Print exec scrot $HOME/Pictures/ScreenShoots/`date +%Y-%m-%d_%H:%M:%S`.png
-bindsym Mod1+Print exec scrot -u $HOME/Pictures/ScreenShoots/`date +%Y-%m-%d_%H:%M:%S`.png
+bindsym $mod+Print exec scrot -u $HOME/Pictures/ScreenShoots/`date +%Y-%m-%d_%H:%M:%S`.png
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
