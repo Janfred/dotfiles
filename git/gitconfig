@@ -24,3 +24,5 @@
     insteadOf = ghh:
 [gpg]
     program = gpg2
+[diff "gpg"]
+	textconv = gpg --no-tty --decrypt
