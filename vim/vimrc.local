@@ -6,18 +6,26 @@ set tabstop=4
 set expandtab
 set autoindent
 set incsearch
+set scrolloff=5
+filetype off
+set runtimepath+=/usr/share/lilypond/2.18.2/vim/
+filetype on
 syntax on
 filetype plugin on
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 highlight SquishedCommas ctermbg=red guibg=red
 call matchadd('ExtraWhitespace', '\s\+$')
 call matchadd('SquishedCommas', ', \@!')
-set list listchars=tab:>-,trail:·
+set list listchars=tab:>-
 map <F5> :set textwidth=80<CR>
 map <F6> :set textwidth=72<CR>
 map <F7> :set textwidth=0<CR>
-map <F9> :w<CR>:!latexmk %<CR>
+au Filetype tex map <F9> :w<CR>:!latexmk %<CR><CR>:!latexmk -c<CR><CR>
 imap <F5> <ESC>:set textwidth=80<CR>a
 imap <F6> <ESC>:set textwidth=72<CR>a
 imap <F7> <ESC>:set textwidth=0<CR>a
-imap <F9> <ESC>:w<CR>:!latexmk %<CR>a
+au Filetype tex imap <F9> <ESC>:w<CR>:!latexmk %<CR><CR>:!latexmk -c<CR><CR>a
+let g:xml_syntax_folding=1
+au FileType xml setlocal foldmethod=syntax
+set background=dark
+
