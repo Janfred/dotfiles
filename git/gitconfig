@@ -1,7 +1,7 @@
 [user]
     name = Jan-Frederik Rieckers
     email = rieckers@uni-bremen.de
-    signingkey = 5EA04DEF
+    signingkey = 50747B34E88A1A6D
 [alias]
     bunch = "log --oneline --graph --decorate --all"
     co = checkout
@@ -10,6 +10,7 @@
     gpg = log --show-signature
     psu = push
     werhatsverbrochen = blame
+    lease = push --force-with-lease
 [commit]
     gpgsign = on
 [core]
@@ -24,5 +25,9 @@
     insteadOf = ghh:
 [gpg]
     program = gpg2
-[diff "gpg"]
-	textconv = gpg --no-tty --decrypt
+#[diff "gpg"]
+#	textconv = gpg --no-tty --decrypt
+[pull]
+	rebase = false
+[init]
+	defaultBranch = main
