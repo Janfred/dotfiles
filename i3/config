@@ -77,6 +77,12 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+
+bindsym $mod+Control+Left  move workspace to output left
+bindsym $mod+Control+Down  move workspace to output down
+bindsym $mod+Control+Up    move workspace to output up
+bindsym $mod+Control+Right move workspace to output right
+
 # split in horizontal orientation
 bindsym $mod+b split h
 
@@ -191,6 +197,7 @@ mouse_warping none
 bar {
         status_command i3status
         tray_output primary
+        workspace_buttons yes
 }
 
 exec xfce4-power-manager
@@ -198,4 +205,4 @@ exec setxkbmap us altgr-intl
 exec setxkbmap -option caps:none
 exec nm-applet
 exec source /home/rieckers/.profile
-exec redshift-gtk
+exec redshift-gtk -l 53.09787:8.88365 -l manual
