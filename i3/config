@@ -33,6 +33,7 @@ bindsym Control+Mod1+o exec xtrlock
 bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1%+ unmute"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1%- unmute"
 bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+bindsym XF86Display exec /usr/bin/autorandr -c
 bindsym Print exec scrot $HOME/Pictures/ScreenShoots/`date +%Y-%m-%d_%H:%M:%S`.png
 bindsym $mod+Print exec scrot -u $HOME/Pictures/ScreenShoots/`date +%Y-%m-%d_%H:%M:%S`.png
 

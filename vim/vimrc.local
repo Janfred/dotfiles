@@ -7,7 +7,6 @@ set expandtab
 set autoindent
 set incsearch
 set scrolloff=5
-filetype off
 set runtimepath+=/usr/share/lilypond/2.18.2/vim/
 filetype on
 syntax on
@@ -28,4 +27,4 @@ au Filetype tex imap <F9> <ESC>:w<CR>:!latexmk %<CR><CR>:!latexmk -c<CR><CR>a
 let g:xml_syntax_folding=1
 au FileType xml setlocal foldmethod=syntax
 set background=dark
-
+au FileType tex setlocal linebreak
